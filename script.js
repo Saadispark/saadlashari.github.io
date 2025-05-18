@@ -1,16 +1,45 @@
-const text = ["Tech Visionary", "Student", "Trader", "CSR"];
-let count = 0, index = 0, current = '', letter = '';
+// Smooth Scroll for all internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
 
-(function type() {
-  if (count === text.length) count = 0;
-  current = text[count];
-  letter = current.slice(0, ++index);
-  document.querySelector(".typing").textContent = letter;
-  if (letter.length === current.length) {
-    count++;
-    index = 0;
-    setTimeout(type, 1000);
-  } else {
-    setTimeout(type, 100);
-  }
-})();
+// Dark Mode (Pre-set, since design is dark)
+document.documentElement.setAttribute("data-theme", "dark");
+
+// Mobile Menu Toggle
+const menuToggle = document.querySelector("#menu-toggle");
+const mobileMenu = document.querySelector("#mobile-menu");
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+}
+
+// Reveal on Scroll Animation
+const revealElements = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+revealElements.forEach(el => observer.observe(el));
+
+// Blog Section Dynamic Toggle (if used)
+const blogToggleButtons = document.querySelectorAll(".toggle-blog");
+blogToggleButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const content = btn.nextElementSibling;
+    content.classList.toggle("hidden");
+  });
+});
