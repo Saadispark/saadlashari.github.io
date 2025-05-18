@@ -1,54 +1,181 @@
-<!-- Save this as index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M. Saad Nawaz Lashari - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #161b22;
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f0f6fc;
+    }
+
+    nav a {
+      color: #58a6ff;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1f6feb;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: #f0f6fc;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #8b949e;
+      margin-bottom: 2rem;
+    }
+
+    .hero img {
+      width: 45%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .cta-button {
+      background-color: #238636;
+      color: #ffffff;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #2ea043;
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 4rem;
+      text-align: center;
+    }
+
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #58a6ff;
+    }
+
+    .section p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #8b949e;
+    }
+
+    footer {
+      background-color: #161b22;
+      padding: 2rem;
+      text-align: center;
+      color: #8b949e;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>M. Saad Nawaz Lashari</h1>
+    <h1>M. Saad Nawaz</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero container">
-    <img src="pexels-energepic-com-27411-159888.jpg" alt="Trading Visual" class="hero-image">
-    <h2 class="fade-in">Exploring the Future Through Code & Capital</h2>
-    <p class="fade-in-delayed">
-      I’m <span class="highlight">Saad Lashari</span> — a driven student, trader, and tech visionary based in Karachi.  
-      Merging <span class="highlight">finance</span> with <span class="highlight">digital transformation</span>.
-    </p>
-    <a href="about.html"><button class="cta-button">Discover My Journey</button></a>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Crafting Innovation Through Code & Vision</h2>
+      <p>Student, Trader, Tech Enthusiast & Customer Support Pro. Building a future empowered by smart technology and seamless digital experiences.</p>
+      <button class="cta-button">Explore Portfolio</button>
+    </div>
+    <img src="https://images.pexels.com/photos/7567557/pexels-photo-7567557.jpeg" alt="Tech Vibes" />
   </section>
 
-  <section class="container">
-    <h2>What I Bring to the Table</h2>
-    <p>
-      Whether it's optimizing support flows or exploring financial markets, I thrive at the intersection of <span class="highlight">curiosity</span> and <span class="highlight">execution</span>.
-    </p>
+  <section class="section" id="about">
+    <h3>About Me</h3>
+    <p>I’m an 18-year-old tech-driven student from Karachi. From trading charts to responsive customer support and creative tech ideation—I'm hands-on with it all.</p>
   </section>
 
-  <section class="container">
-    <img src="https://images.pexels.com/photos/11813170/pexels-photo-11813170.jpeg" alt="Communication Tech" class="hero-image">
-    <h2>Vision</h2>
-    <p>
-      I believe in building tools that are <span class="highlight">impactful</span> and <span class="highlight">adaptive</span>.
-      Whether in <strong>trading tech</strong>, <strong>AI tools</strong>, or <strong>digital customer experience</strong> —  
-      I’m laser-focused on innovation that empowers users.
-    </p>
+  <section class="section" id="projects">
+    <h3>Projects & Passion</h3>
+    <p>Though still in early stages, I'm diving into smart finance, automation, and ethical AI. This portfolio is a reflection of where I begin and where I'm headed.</p>
+  </section>
+
+  <section class="section" id="blog">
+    <h3>Blog & Ideas</h3>
+    <p>I often pen down my thoughts on market patterns, digital tools, and tech trends that shape our future. Stay tuned for updates.</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h3>Let’s Collaborate</h3>
+    <p>saadnawazlashari@gmail.com | LinkedIn: saadnawazlashari</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 M. Saad Nawaz Lashari | Built for tomorrow.</p>
+    &copy; 2025 M. Saad Nawaz Lashari — Dark. Minimal. Futuristic.
   </footer>
 </body>
 </html>
