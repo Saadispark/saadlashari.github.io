@@ -1,4 +1,3 @@
-// script.js
 const text = ["Tech Visionary", "Student", "Trader", "CSR"];
 let count = 0, index = 0, current = '', letter = '';
 
