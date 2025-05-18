@@ -1,27 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About – Saad Lashari</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - M. Saad Nawaz Lashari</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #161b22;
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f0f6fc;
+    }
+
+    nav a {
+      color: #58a6ff;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1f6feb;
+    }
+
+    .section {
+      padding: 4rem;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .section h2 {
+      font-size: 3rem;
+      color: #58a6ff;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #8b949e;
+    }
+
+    footer {
+      background-color: #161b22;
+      padding: 2rem;
+      text-align: center;
+      color: #8b949e;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>About Me</h1>
+    <h1>M. Saad Nawaz</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <main class="container">
-    <p>I’m M. Saad Nawaz Lashari, an 18-year-old tech enthusiast, trader, and student from Karachi. Passionate about customer service, automation, and building sleek user interfaces that speak innovation.</p>
-  </main>
+
+  <section class="section">
+    <h2>About Me</h2>
+    <p>I’m an 18-year-old tech-driven student from Karachi. From trading charts to responsive customer support and creative tech ideation—I'm hands-on with it all. My mission is to bridge the gap between technology and real-world problems through intuitive design, innovation, and execution.</p>
+    <p>Outside of tech, I enjoy exploring financial markets, nature walks, and brainstorming futuristic ideas with my peers. Let's create, innovate, and lead the future together.</p>
+  </section>
+
   <footer>
-    <p>&copy; 2025 M. Saad Nawaz Lashari</p>
+    &copy; 2025 M. Saad Nawaz Lashari — Dark. Minimal. Futuristic.
   </footer>
 </body>
 </html>
