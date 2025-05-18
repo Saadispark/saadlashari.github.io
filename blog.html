@@ -4,45 +4,128 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog | M. Saad Nawaz Lashari</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #161b22;
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f0f6fc;
+    }
+
+    nav a {
+      color: #58a6ff;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1f6feb;
+    }
+
+    .blog-section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .blog-post {
+      background-color: #161b22;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-post h2 {
+      color: #f0f6fc;
+      margin-bottom: 1rem;
+    }
+
+    .blog-post p {
+      color: #8b949e;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #161b22;
+      padding: 2rem;
+      text-align: center;
+      color: #8b949e;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Blog</h1>
-     <nav>
+    <h1>M. Saad Nawaz</h1>
+    <nav>
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main class="container">
-    <h1 class="page-title">Latest Blog Posts</h1>
+  <section class="blog-section">
+    <div class="blog-post">
+      <h2>The Future of Trading with AI</h2>
+      <p>As artificial intelligence continues to reshape industries, trading is at the forefront. In this post, I explore how smart algorithms and data-driven decisions are transforming markets.</p>
+    </div>
 
-    <article class="blog-post reveal">
-      <h2 class="post-title">Why Tech Inspires Me</h2>
-      <p class="post-meta">Posted on May 18, 2025</p>
-      <p>
-        From early exposure to automation and programming to current explorations in trading and AI — technology drives everything I pursue. I believe in combining innovation with intuition, and this blog is where I unpack those ideas. Stay tuned!
-      </p>
-    </article>
+    <div class="blog-post">
+      <h2>Why Minimalist Design Wins</h2>
+      <p>Minimalism isn't just aesthetic—it's strategy. Learn how a clean, focused interface improves user engagement and reflects strong brand clarity in digital portfolios.</p>
+    </div>
 
-    <article class="blog-post reveal">
-      <h2 class="post-title">Trading and Tech: Where I Find Synergy</h2>
-      <p class="post-meta">Posted on May 15, 2025</p>
-      <p>
-        Trading isn't just charts and numbers — it's decision science. I use smart money concepts and tech-driven analysis to stay ahead of market psychology. Here’s how I balance intuition with tech tools in the financial world.
-      </p>
-    </article>
-
-  </main>
+    <div class="blog-post">
+      <h2>Building Resilient Mindsets in Tech</h2>
+      <p>The tech world demands adaptability. Here’s how I cultivate a growth mindset while balancing code, customer support, and emerging technologies.</p>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 M. Saad Nawaz Lashari. All rights reserved.</p>
+    &copy; 2025 M. Saad Nawaz Lashari — Dark. Minimal. Futuristic.
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
