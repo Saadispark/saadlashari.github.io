@@ -139,7 +139,28 @@
   <footer>
     &copy; 2025 M. Saad Nawaz Lashari — All rights reserved.
   </footer>
-  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.51/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/XQghSlgEpz7K05N9/scene.splinecode"></spline-viewer>
+ <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+<script>
+  // runs immediately
+  new cursoreffects.confettiCursor();
+
+  // or wait for page load
+  window.addEventListener("load", () => {
+    new cursoreffects.ghostCursor();
+  });
+</script>
+<script type="module">
+  import { fairyDustCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+  new fairyDustCursor();
+</script>
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+<script>
+  new cursoreffects.emojiCursor({
+    emoji: ["🔥", "✨", "💀"],
+    delay: 25
+  });
+</script>
+</body>
+
 </body>
 </html>
